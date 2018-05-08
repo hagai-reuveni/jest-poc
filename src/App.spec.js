@@ -7,4 +7,4 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
-console.log(window);
+//console.log(window); // this is to test if jest is running with js-dom
