@@ -10,6 +10,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint ./src",
+    "precommit": "LIST=`git diff-index --no-commit-id --name-only origin | grep .js | grep -v .json`; if [ -n \"$LIST\" ]; then eslint $LIST --fix; sleep 1; fi",
     "test": "react-scripts test --env=jsdom",
     "test-without-watch": "CI=true react-scripts test",
     "test-without-dom": "react-scripts test",
@@ -21,10 +23,12 @@
   "devDependencies": {
     "babel-jest": "^22.4.3",
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1"
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0"
   },
   "jest": {
-    "collectCoverageFrom" : [
+    "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/",
       "!<rootDir>/path/to/dir/"
