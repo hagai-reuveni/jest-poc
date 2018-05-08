@@ -10,7 +10,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "CI=true react-scripts test",
+    "test-watch": "react-scripts test",
     "test-with-dom": "react-scripts test --env=jsdom",
     "update-snapshots": "react-scripts test --env=jsdom --updateSnapshot",
     "coverage": "react-scripts test --env=jsdom --coverage",
