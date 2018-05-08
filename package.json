@@ -10,9 +10,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "CI=true react-scripts test",
-    "test-watch": "react-scripts test",
-    "test-with-dom": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom",
+    "test-without-watch": "CI=true react-scripts test",
+    "test-without-dom": "react-scripts test",
     "update-snapshots": "react-scripts test --env=jsdom --updateSnapshot",
     "coverage": "react-scripts test --env=jsdom --coverage",
     "open-cov-doc": "open coverage/lcov-report/index.html",
