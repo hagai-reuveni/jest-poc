@@ -82,6 +82,7 @@
     "import/no-duplicates": [0],
     "dot-notation": [1],
     "no-process-exit": [1],
+    "no-trailing-spaces": [2],
     "max-len": [2, 150]
   },
   "plugins": [
