@@ -13,10 +13,35 @@
     "test": "react-scripts test",
     "test-with-dom": "react-scripts test --env=jsdom",
     "update-snapshots": "react-scripts test --env=jsdom --updateSnapshot",
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "open-cov-doc": "open coverage/lcov-report/index.html",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "babel-jest": "^22.4.3",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1"
+  },
+  "jest": {
+    "collectCoverageFrom" : [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 95,
+        "statements": 90,
+        "functions": 95,
+        "branches": 90
+      },
+      "./src/components/": {
+        "branches": 95,
+        "statements": 95
+      },
+      "./src/components/**/*.jsx": {
+        "statements": 50
+      }
+    }
   }
 }
