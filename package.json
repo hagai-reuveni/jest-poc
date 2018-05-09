@@ -1,6 +1,6 @@
 {
   "name": "snapshot-testing",
-  "description": "Some of the react code is based on a project by Francesco Agnoletto: https://github.com/Kornil/simple-redux-app#readme"
+  "description": "Some of the react code is based on a project by Francesco Agnoletto: https://github.com/Kornil/simple-redux-app#readme",
   "version": "0.1.0",
   "private": true,
   "scripts": {
