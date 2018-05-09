@@ -1,12 +1,8 @@
 {
   "name": "snapshot-testing",
+  "description": "Some of the react code is based on a project by Francesco Agnoletto: https://github.com/Kornil/simple-redux-app#readme"
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -20,13 +16,22 @@
     "open-cov-doc": "open coverage/lcov-report/index.html",
     "eject": "react-scripts eject"
   },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
+  },
   "devDependencies": {
     "babel-jest": "^22.4.3",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
     "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "redux-logger": "^3.0.6"
   },
   "jest": {
     "snapshotSerializers": ["enzyme-to-json/serializer"],
