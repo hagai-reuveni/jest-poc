@@ -31,10 +31,13 @@
     "enzyme-to-json": "^3.3.3",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "sinon": "^5.0.7"
   },
   "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/",
