@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home/> Should render home  1`] = `
+<div>
+  <h2>
+    Home Page
+  </h2>
+  <p>
+    The counter value is 
+    1
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Add
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</div>
+`;

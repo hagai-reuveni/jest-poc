@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import * as actions from '../actions';
 
-const Home = ({ counterValue, handleIncreaseValue, handleDecreaseValue }) => (
+export const Home = ({ counterValue, handleIncreaseValue, handleDecreaseValue }) => (
   <div>
     <h2>Home Page</h2>
     <p>The counter value is {counterValue }</p>
