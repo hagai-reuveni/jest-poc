@@ -1,5 +1,5 @@
 import counterReducer from './counterReducer';
-import { INCREMENT, DECREMENT } from '../actions/types';
+import * as types from '../actions/types';
 
 const getRandomNumber = (min, max) => Math.floor(Math.random() * ((max - min) + 1)) + min;
 
@@ -12,14 +12,14 @@ describe('Counter reducer', () => {
   it('should handle INCREMENT', () => {
     expect(
       counterReducer(randomNumber, {
-        type: INCREMENT,
+        type: types.INCREMENT,
       }),
     ).toEqual(randomNumber + 1);
   });
   it('should handle DECREMENT', () => {
     expect(
       counterReducer(randomNumber, {
-        type: DECREMENT,
+        type: types.DECREMENT,
       }),
     ).toEqual(randomNumber - 1);
   });

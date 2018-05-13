@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import * as actions from '../actions';
+import * as actions from '../../actions';
 
 export const Home = ({ counterValue, handleIncreaseValue, handleDecreaseValue }) => (
   <div>
     <h2>Home Page</h2>
-    <p>The counter value is {counterValue }</p>
-    <button onClick={handleIncreaseValue}>Add</button>
-    <button onClick={handleDecreaseValue}>Remove</button>
+    <p>The counter value is { counterValue }</p>
+    <button onClick={ handleIncreaseValue }>Add</button>
+    <button onClick={ handleDecreaseValue }>Remove</button>
   </div>
 );
 
