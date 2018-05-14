@@ -29,7 +29,7 @@ export function getUsersFromServer() {
       return response;
     } catch (error) {
       dispatch({ type: ERROR_DATA_LOADING, error });
-      throw error;
+      return error;
     }
   }
 }
