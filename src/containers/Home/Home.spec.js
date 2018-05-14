@@ -1,9 +1,7 @@
 import React from 'react';
 import { Home } from './Home';
 import sinon from 'sinon';
-//import configureStore from 'redux-mock-store';
-//const mockStore = configureStore();
-//const dispatch = sinon.spy();
+
 
 describe('<Home/>', () => {
   let container;

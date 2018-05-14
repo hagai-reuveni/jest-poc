@@ -22,7 +22,8 @@ export function getUsersFromServer() {
   return async dispatch => {
     try {
       const response = await userApi.getAll();
-      // dispatch(usersLoaded(response.data.results));
+      //dispatch(usersLoaded(response.data.results));
+      //** next 2 lines is for using fetch API and not axios */
       const data = await response.json();
       dispatch(usersLoaded(data.results));
       return response;
