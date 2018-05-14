@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders without crashing 1`] = `
+<BrowserRouter>
+  <main
+    className="container"
+  >
+    <div>
+      <h1>
+        This is a jest poc test
+      </h1>
+      <p>
+        If you see this everything is working!
+      </p>
+    </div>
+    <Routes />
+  </main>
+</BrowserRouter>
+`;
