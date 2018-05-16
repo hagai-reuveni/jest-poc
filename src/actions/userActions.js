@@ -1,7 +1,8 @@
 import * as userApi from '../api/userApi';
+import { call, put } from 'redux-saga/effects';
 
 import {
-  LOADING_DATA,
+  USERS_LOADED_REQUEST,
   ERROR_DATA_LOADING,
   USERS_LOADED_SUCCESS,
 } from './types';
@@ -11,25 +12,20 @@ import {
  * @return users' list
  */
 
-function usersLoaded (users) {
-  return {
-    type: USERS_LOADED_SUCCESS,
-    users,
-  }
+export function fetchUsers() {
+    return { type: USERS_LOADED_REQUEST}
 }
 
-export function getUsersFromServer() {
-  return async dispatch => {
+export function* getUsersFromServer() {
+  console.log('INNNNN');
     try {
-      const response = await userApi.getAll();
-      //dispatch(usersLoaded(response.data.results));
-      //** next 2 lines is for using fetch API and not axios */
-      const data = await response.json();
-      dispatch(usersLoaded(data.results));
-      return response;
+      const response = yield call(userApi.getAll);
+      console.log(response.results);
+      yield put({
+        type: USERS_LOADED_SUCCESS,
+        users: response.results,
+      });
     } catch (error) {
-      dispatch({ type: ERROR_DATA_LOADING, error });
-      return error;
+      yield put({ type: ERROR_DATA_LOADING, error });
     }
-  }
 }

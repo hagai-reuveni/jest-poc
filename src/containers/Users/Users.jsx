@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 
 import * as actions from '../../actions';
 
-export const Users = ({ users, getUsersFromServer }) => (
+export const Users = ({ users, fetchUsers }) => (
   <div>
     <h2>Users</h2>
     <p>This is a mock users' page (for testing async actions)</p>
-    <button onClick={getUsersFromServer}>Get Users</button>
+    <button onClick={fetchUsers}>Get Users</button>
     <div>
       {
         users.map((user, index)=>{
@@ -21,7 +21,7 @@ export const Users = ({ users, getUsersFromServer }) => (
 
 Users.propTypes = {
   users: PropTypes.array.isRequired,
-  getUsersFromServer: PropTypes.func.isRequired,
+  fetchUsers: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -29,8 +29,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getUsersFromServer: () => {
-    dispatch(actions.getUsersFromServer());
+  fetchUsers: () => {
+    dispatch(actions.fetchUsers());
   },
 });
 

@@ -2,18 +2,37 @@
 
 exports[`<App /> renders without crashing 1`] = `
 <BrowserRouter>
-  <main
-    className="container"
-  >
-    <div>
-      <h1>
-        This is a jest poc test
-      </h1>
-      <p>
-        If you see this everything is working!
-      </p>
-    </div>
-    <Routes />
-  </main>
+  <div>
+    <nav>
+      <NavLink
+        activeClassName="active"
+        ariaCurrent="true"
+        to="/"
+      >
+        Home
+      </NavLink>
+       | | 
+      <NavLink
+        activeClassName="active"
+        ariaCurrent="true"
+        to="/users"
+      >
+        Users
+      </NavLink>
+    </nav>
+    <main
+      className="container"
+    >
+      <div>
+        <h1>
+          This is a jest poc test
+        </h1>
+        <p>
+          If you see this everything is working!
+        </p>
+      </div>
+      <Routes />
+    </main>
+  </div>
 </BrowserRouter>
 `;

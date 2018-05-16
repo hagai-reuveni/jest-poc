@@ -11,4 +11,7 @@ const axiosInstance = axios.create({
   });
 
 //export const getAll = () => axiosInstance.get('?results=20');
-export const getAll = () => fetch(`${BASE_URL}?results=20`);
+export const getAll = () => fetch(`${BASE_URL}?results=20`).then(res => {
+  console.log('response: ', res);
+  res.json();
+});
